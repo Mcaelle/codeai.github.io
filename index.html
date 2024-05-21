@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Editor</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+    background-color: #lightcyan;
+}
+
+#editor {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+
+}
+
+.editor-pane {
+    flex: 1;
+    margin: 50px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden;
+
+}
+
+.editor-pane h1 {
+    margin: 0;
+    padding: 10px;
+    background: #eee;
+    border-bottom: 1px solid #black;
+}
+
+.textarea {
+    width: 100%;
+    height: calc(100% - 40px);
+    border: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-family: monospace;
+    font-size: 14px;
+}
+
+    </style>
+</head>
+<body>
+    <div id="editor">
+        <div class="editor-pane">
+            <h1>HTML</h1>
+            <textarea id="html-editor"></textarea>
+        </div>
+        <div class="editor-pane">
+            <h1>CSS</h1>
+            <textarea id="css-editor"></textarea>
+        </div>
+        <div class="editor-pane">
+            <h1>JavaScript</h1>
+            <textarea id="js-editor"></textarea>
+        </div>
+        <div class="editor-pane">
+            <h1>Output</h1>
+            <iframe id="output"></iframe>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
